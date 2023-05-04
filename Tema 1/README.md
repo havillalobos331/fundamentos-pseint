@@ -1,4 +1,4 @@
-# 1. Identificar y utilizar la herramienta de PSeInt para la representación de programas.
+# [1. Identificar y utilizar la herramienta de PSeInt para la representación de programas.](https://www.youtube.com/watch?v=D-pUPh5NL5A&list=PLx4vAEcrpWyGMKg4tGCZi1QtLeexLZOJy&index=1)
 
 PSeInt es un entorno de desarrollo diseñado como herramienta de aprendizaje para el nuevo programador. PSeInt utiliza tanto pseudocódigo cercano al lenguaje humano, como diagramas de flujo para ayudar a la mente del estudiante a entender el flujo del programa. Con esto, el estudiante poco a poco obtiene la mentalidad requerida para ser programador.
 
@@ -79,7 +79,7 @@ Cada uno hace lo siguiente:
 
 Cabe mencionar que esta forma de diagrama de flujo fue diseñada por quienes programaron PSeInt, para el uso de otro tipo de diagrama se tiene de la forma Nassi-Shneiderman con el uso del siguiente botón.  
 ![Cambiar a diagramas Nassi-Shneiderman](imagenes/cambiar_nassi.png)  
-
+![Ejemplo de un diagrama Nassi-Shneiderman](imagenes/diagrama_shneidermann.png)  
 Cada una tiene sus ventajas y desventajas: el código en texto siendo difícil de seguir en proyectos grandes o complejos, mientras 
 es el que tiene el mayor control sobre las instrucciones del programa: y el diagrama de flujo siendo sencillo de seguir, pero teniendo dificultades en hacer cambios en la estructura del programa. 
 Pero uno no está limitado a sólo uno de estos modos, se puede cambiar entre los dos cuando se necesite. Un ejemplo es pasar a vista gráfica de vez en cuando para darse una idea del flujo del programa para no perder el hilo del flujo, o cuando se necesite diagnosticar algún problema.

@@ -1,4 +1,5 @@
-# 2. Analizar y explicar el comportamiento de las estructuras básicas de control elaborando ejemplos mediante pseudocódigo y diagrama de flujo utilizando la herramienta de PSeInt.  
+# [2. Analizar y explicar el comportamiento de las estructuras básicas de control elaborando ejemplos mediante pseudocódigo y diagrama de flujo utilizando la herramienta de PSeInt.](https://www.youtube.com/watch?v=1QasqWossMQ&list=PLx4vAEcrpWyGMKg4tGCZi1QtLeexLZOJy&index=2)
+
 ## ‘If’ o ‘Si’
 Es una pregunta simple, “¿es la expresión correcta o falsa?” Si la expresión es correcta, ocurre un bloque de código, si no, ocurre otro.
 Para el ejemplo tenemos el siguiente:  
