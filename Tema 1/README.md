@@ -1,4 +1,4 @@
-# Identificar y utilizar la herramienta de PSeInt para la representación de programas.
+# 1. Identificar y utilizar la herramienta de PSeInt para la representación de programas.
 
 PSeInt es un entorno de desarrollo diseñado como herramienta de aprendizaje para el nuevo programador. PSeInt utiliza tanto pseudocódigo cercano al lenguaje humano, como diagramas de flujo para ayudar a la mente del estudiante a entender el flujo del programa. Con esto, el estudiante poco a poco obtiene la mentalidad requerida para ser programador.
 
