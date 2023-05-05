@@ -54,7 +54,14 @@ Empezando a utilizar a PSeInt, esta será la pantalla principal:
 
 PSeInt tiene 2 maneras de representar un programa:
 - PseudoCódigo en texto, una manera similar a lo que se vería en un entorno regular de programación. Esta es la forma por defecto que utiliza PSeInt.  
-![Ejemplo de pseudocodigo](imagenes/ejemplo_pseudocodigo.png)
+```
+Algoritmo func
+	a<-10
+	b<-2
+	c<-a*b
+	Escribir c
+FinAlgoritmo
+```
 
 Tiene las funcionalidades que espera uno de un entorno de desarrollo como  auto-competición de funciones y detección de errores antes de ejecución, 
 entre otras antes mencionadas en la lista de funcionalidades. La diferencia que hace PSeInt es que el lenguaje de programación que utiliza está diseñado para ser similar 
@@ -95,5 +102,5 @@ También del lado derecho tiene una lista de operadores y funciones.
 Que se expande  
 ![La lista de operadores y funciones](imagenes/operadores_funciones_2.png)  
 Junto a esta viene otra pestaña que muestra las variables y funciones declaradas en ese archivo.
-![Visualizador de funciones y variables](lista_variables.png)
+![Visualizador de funciones y variables](imagenes/lista_variables.png)
 Con los básicos listos, podemos explicar los comandos, estructuras de control y datos que tenemos disponibles.

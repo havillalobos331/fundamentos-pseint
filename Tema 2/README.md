@@ -24,21 +24,45 @@ Pero si se proporciona un valor fuera del rango esperado, se tiene una contingen
 Esta se conoce como ‘De Otro Modo’ en nuestro código de ejemplo.
 ## Ciclos ‘while’, ‘do while’ 
 Un ciclo se refiere a un bloque de código que se repite mientras (while) una condición se cumple. Hay 2 tipos de ciclos, cada uno descrito por **cuando se revisa la condición para repetir el bloque.**  
-![Como llamar a un ciclo](imagenes/ejemplo_ciclo_texto.png)  
+```
+Algoritmo Main
+	Escribir 'Escribe un numero'
+	Leer a
+	Escribir 'while'
+	b<-0
+	Mientras a>b Hacer
+		Escribir b
+		b <- b+1
+	FinMientras
+	Escribir 'do-while'
+	b<-0
+	Repetir
+		Escribir b
+		b <- b+1
+	Hasta Que a<=b
+	Escribir 'for'
+	Para b<-0 Hasta a Con Paso 2 Hacer
+		Escribir b
+	FinPara
+FinAlgoritmo
+```
 Primero se tiene ‘while’, que primero revisa la condición **antes de ejecutar el bloque.**  
 ![Ciclo while](imagenes/ejemplo_ciclo_1.png)  
 Aquí primero revisa si ‘a’ es mayor que b (inicializado en 0), si es cierto, aumenta ‘b’ en 1 e imprime el valor de ‘b’. La ejecución regresa al inicio del ciclo, en donde está la condición y vuelve a preguntar. Cuando ‘a’ ya no cumple con la condición, el ciclo es roto y continua al siguiente bloque.  
 ![Ciclo do-while](imagenes/ejemplo_ciclo_2.png)  
 Aquí el siguiente aumenta ‘b’ en 1 antes de revisar la condición. Si la condición no se cumple, vuelve a ejecutar la instrucción hasta que la condición se cumpla. Esto lo distingue como el ciclo do-while.
 
-Ciclo “For”
+## Ciclo 'For'
 
 En el ciclo for, varias cosas son manejadas por el lenguaje que no tienen que ser implementadas por el programador.
-![Como llamar un ciclo for](imagenes/ejemplo_ciclo_texto2.png)  
-- “Variable_numerica” es la función que utiliza ‘b’ en nuestros ejemplos anteriores como contador.
-- Su “valor_inicial”. 
-- “valor_final” nos dice en dónde termina nuestro ciclo.
-- Moviéndose (paso) valores cada ciclo.
+```
+Para variable_numerica<-valor_inicial Hasta valor_final Con Paso paso Hacer secuencia_de_acciones
+	Fin Para
+```
+- `variable_numerica` es la función que utiliza ‘b’ en nuestros ejemplos anteriores como contador.
+- Su `valor_inicial`. 
+- `valor_final` nos dice en dónde termina nuestro ciclo.
+- Moviéndose `paso` valores cada ciclo.
 
 ![Ciclo for](imagenes/ejemplo_ciclo_3.png)  
 Aquí en su versión gráfica tenemos ‘b’ como la variable numérica, ‘0’ como valor inicial, ‘2’ como el paso y ‘a’ como el valor final. Regresarnos a los ejemplos del ciclo while y do-while, las instrucciones adicionales que utilizamos para generar un contador ya vienen incluidas en la llamada del ciclo for. En la implementación de PSeInt, funciona como un ciclo do-while, donde se revisa la condición después de ejecutar el bloque interno, demostrado en esta salida del mismo.  
