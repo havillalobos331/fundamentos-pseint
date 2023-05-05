@@ -19,7 +19,7 @@ a<-PI*(r^2)
 Escribir "El area es " a
 ```
 ![Ejemplo metodo 1](imagenes/areas_ejemplo_0.png)
-Pero hay situaciones donde no se conoce el radio, si no solo el perímetro del círculo. ¿Qué se haría en esa situación? Conociendo que $p = \pi d$, $p$ siendo el perimetro del circulo y $d$ el diámetro del círculo, que en sí es $d = 2r$. Con esto resolvemos para $r = p2$  y después para $a = \pi (\frac{p}{2 \pi})^2 -> a= \frac{p^2}{4 \pi}.
+Pero hay situaciones donde no se conoce el radio, si no solo el perímetro del círculo. ¿Qué se haría en esa situación? Conociendo que $p = \pi d$, $p$ siendo el perimetro del circulo y $d$ el diámetro del círculo, que en sí es $d = 2r$. Con esto resolvemos para $r = p2$  y después para $a = \pi (\frac{p}{2 \pi})^2 -> a= \frac{p^2}{4 \pi}$.
 Pero ahora tenemos dos maneras de calcular el área, con información distinta para cada una. Si queremos tener ambas dentro del mismo programa, hay que separar como llamarlas.
 
 Pero el programa necesita conocer cuál manera se va a utilizar. Como solo son dos opciones, podemos con un simple IF de acuerdo con lo que se introdujo en opc.
