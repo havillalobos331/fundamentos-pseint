@@ -60,7 +60,7 @@ Funcion a<-Dividir (num1, num2)
 FinFuncion
 ```
 La forma en que implementamos las funciones de Sumar, Restar, Multiplicar y Dividir es similar como el resto de las funciones matemáticas fueron implementadas en PSeInt. Como ejemplo: la fórmula para sen(x), teniendo solo el ángulo:
-$\sin(x)=\sum_{k=0}^n \frac{(-1)^k}{(2k=1)!} x^{2k+1$}
+$\sin(x)=\sum_{k=0}^n \frac{(-1)^k}{(2k=1)!} x^{2k+1}$
 Una implementación de este algoritmo está definida como la función de sen(x) en PSeInt.
 
 Cabe mencionar, que el visualizador de grafos de PSeInt pide que se elija cuál algoritmo/función se busca visualizar.
