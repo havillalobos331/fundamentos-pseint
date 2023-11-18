@@ -11,18 +11,25 @@ Donde $a$ es el área que se busca, $\pi$ es la constante pi y $r$ es el radio de
 - Calculando el radio al cuadrado y multiplicar ese resultado por la constante 
 - Regresando el área calculada hacia el usuario.
 
-En PSeInt se veria asi:  
+En PSeInt se vería de la manera representada en la imagen 1:  
+
 ```
 Escribir "Cual es el radio del circulo?"
 Leer r
 a<-PI*(r^2)
 Escribir "El area es " a
 ```
-![Ejemplo metodo 1](imagenes/areas_ejemplo_0.png)  
-Pero hay situaciones donde no se conoce el radio, si no solo el perímetro del círculo. ¿Qué se haría en esa situación? Conociendo que $p = \pi d$, $p$ siendo el perimetro del circulo y $d$ el diámetro del círculo, que en sí es $d = 2r$. Con esto resolvemos para $r = p2$  y después para $a = \pi (\frac{p}{2 \pi})^2 -> a= \frac{p^2}{4 \pi}$.
+
+![Imagen 1 Algoritmo áreas y un resultado de ejemplo.](imagenes/areas_ejemplo_0.png)  
+
+Imagen 1 Algoritmo áreas y un resultado de ejemplo.
+
+Pero hay situaciones donde no se conoce el radio, si no solo el perímetro del círculo. ¿Qué se haría en esa situación? Conociendo que $p = \pi d$, $p$ siendo el perimetro del circulo y $d$ el diámetro del 
+círculo, que en sí es $d = 2r$. Con esto resolvemos para $r = p2$  y después para $a = \pi (\frac{p}{2 \pi})^2 -> a= \frac{p^2}{4 \pi}$.
 Pero ahora tenemos dos maneras de calcular el área, con información distinta para cada una. Si queremos tener ambas dentro del mismo programa, hay que separar como llamarlas.
 
-Pero el programa necesita conocer cuál manera se va a utilizar. Como solo son dos opciones, podemos con un simple IF de acuerdo con lo que se introdujo en opc.
+Pero el programa necesita conocer cuál manera se va a utilizar. Como solo son dos opciones, podemos con un simple IF de acuerdo con lo que se introdujo en opc en la imagen 2.
+
 ```
 Algoritmo areas
 	Escribir "Tienes el"
@@ -42,9 +49,13 @@ Algoritmo areas
 	FinSi
 FinAlgoritmo
 ```
-![Ejemplo metodo 2](imagenes/areas_ejemplo_1.png)  
 
-De una vez, mientras estamos agregando mejoras a la experiencia de usuario, encapsulamos el programa dentro de una ciclo para no tener que reabrir el programa cada vez que se necesita.
+![Imagen 2. Agregando el ‘Si’ al ejemplo.](imagenes/areas_ejemplo_1.png)  
+
+Imagen 2. Agregando el ‘Si’ al ejemplo.
+
+De una vez, mientras estamos agregando mejoras a la experiencia de usuario, encapsulamos el programa dentro de una ciclo en la imagen 3 para no tener que reabrir el programa cada vez que se necesita.
+
 ```
 Algoritmo areas
 	Repetir
@@ -66,8 +77,13 @@ Algoritmo areas
 	Hasta Que Falso
 FinAlgoritmo
 ```
-![Ejemplo usando un ciclo](imagenes/areas_ejemplo_2.png)  
+
+![Imagen 3. Agregando el ciclo al ejemplo.](imagenes/areas_ejemplo_2.png)  
+
+Imagen 3. Agregando el ciclo al ejemplo.
+
 Necesitamos una forma de detener el ciclo y salir del programa, afortunadamente ya tenemos una variable que ya utilizamos para tomar decisiones (opc).
+
 ```
 Algoritmo areas
 	Repetir
@@ -90,8 +106,15 @@ Algoritmo areas
 	Hasta Que opc = 3
 FinAlgoritmo
 ```
+
+![Imagen 4. Diagrama de flujo del algoritmo completo.](imagenes/diagrama_areas.png)
+
+Imagen 4. Diagrama de flujo del algoritmo completo.
   
-Aquí introducir ‘3’ hace que termine el programa. Con esto el flujo del programa está terminado, pero nos faltan opciones. Dijimos inicialmente que se podría calcular el área de varias figuras con el programa, pero al momento solo tenemos dos maneras de calcular la de un círculo. Para hacer más fácil de leer el código, separemos lo que ya tenemos en funciones.
+Aquí introducir ‘3’ hace que termine el programa. Con esto el flujo del programa está terminado, pero nos faltan opciones. 
+Se mencionó inicialmente que se podría calcular el área de varias figuras con el programa, pero al momento solo tenemos dos maneras de calcular la de un círculo. 
+Para hacer más fácil de leer el código, se separa lo que ya se tiene en funciones.
+
 ```
 Funcion CirRadi()
 	Escribir "Cual es el radio del circulo?"
@@ -106,7 +129,9 @@ Funcion  CirPeri()
 	Escribir "El area es " a
 FinFuncion
 ```
+
 Hacemos una nueva función por cada figura/método que agreguemos. Después es el caso de la selección como tal. Como se dijo anteriormente, el uso de muchos IFs seguidos o anidados no se ve bien, así que lo ponemos en un switch-case.
+
 ```
 Segun opc Hacer
 		1:
@@ -117,4 +142,5 @@ Segun opc Hacer
 			secuencia_de_acciones_3
 	Fin Segun
 ```
+
 Con esto el ejemplo termina, pero uno puede agregar las opciones que quiera.

@@ -44,9 +44,21 @@ Escribir 'Sera con efectivo(1), tarjeta(2), o por transferencia?(3)?'
     Fin Segun
 FinAlgoritmo
 ```
-![Grafo del Ejemplo](imagenes/adicional_1_grafo.png)
 
-Aquí hacemos uso de las estructuras de control que hemos visto en este capítulo.
+![Imagen 1. Diagrama de Flujo de Ejemplo 1.5.](imagenes/adicional_1_grafo.png)
+
+Imagen 1. Diagrama de Flujo de Ejemplo 1.5.
+
+En este ejemplo se hace uso de las estructuras de control abordadas en el capítulo. 
+Empezando con un ciclo ‘for’ que controla la parte principal del programa. 
+Dentro de éste ciclo están los comandos para ingresar el producto y la cantidad de los mismos. 
+Las últimas instrucciones dentro del ciclo es un ‘if’ que revisa la suma total de artículos. 
+Si ésta suma sobrepasa el límite establecido, se le hace conocer al usuario y se reduce el número de artículos a ingresar hasta que regrese al límite.
+En el caso que todavía quede espacio en el carrito, también se le da al usuario la opción de terminar el ciclo antes de tiempo. 
+Si el usuario accede a terminar antes, o la revisión del ‘if’ concluye que el carrito está lleno, se rompe el ciclo y pasa a la siguiente parte. 
+Después del ciclo, el programa menciona el total de artículos y pregunta cuál opción de pago se va a utilizar. La opción seleccionada es evaluada por un caso ‘switch’. 
+Con esto se utilizan las tres estructuras de control vistas: caso ‘if’, caso ‘switch’ y los ciclos.
+
 
 Todavía hay puntos en lo que se puede mejorar este ejemplo:
 - ¿Qué pasa si se mete información fuera de lo esperado?
