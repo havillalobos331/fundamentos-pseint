@@ -1,88 +1,66 @@
-# [Explicar los tipos de función y su aplicación elaborando ejemplos mediante pseudocódigo y diagrama de flujo utilizando la herramienta de PSeInt.](https://www.youtube.com/watch?v=eE24YdAjF7c&list=PLx4vAEcrpWyGMKg4tGCZi1QtLeexLZOJy&index=3)
+# [Explicar las estructuras básicas de datos, tales como arreglos y cadenas; utilizando la herramienta de PSeInt.](https://www.youtube.com/watch?v=cJ_BDXCIdkw&list=PLx4vAEcrpWyGMKg4tGCZi1QtLeexLZOJy&index=4)
+## Arreglos
+Un arreglo es un grupo de valores organizados con la manera de acceder a cualquiera de estos en cualquier momento. En PSeInt los arreglos se declaran con “Dimensión” de la siguiente manera:  
 
-Una función es una sección de código separada del bloque principal para ser llamada después o múltiples veces sin tener que volver a escribir ese pedazo de código. 
-Las funciones pueden, pero no están forzadas, a recibir información (parámetros) y regresar información (retorno). De acuerdo a cuales de estas dos utiliza, se clasifican las funciones. 
+`Dimension a[]`  
 
-## Tipo 1
-
-Las funciones de tipo 1 no reciben parámetros, ni regresan un retorno.
-Un ejemplo de estos es una función de inicialización, donde se ejecuta esta función al iniciar el programa. 
-Esta función sólo tendrá acceso a variables que están dentro de su alcance sin el uso de parámetros. 
-En el caso de PSeInt, una función de este tipo solo se le puede asignar información antes de ejecución y no se podrá traspasar información adicional empezando la ejecución. la imagen 1 lo demuestra
-
-![Imagen 1. Usando la ventana de variables para demostrar que ‘c’ en foo() es distinto al visto en func.](imagenes/ejemplo_inicializacion.png)  
-
-Imagen 1. Usando la ventana de variables para demostrar que ‘c’ en foo() es distinto al visto en func.
-
-Como se ve en la imagen 2, la función foo() no tiene idea del valor de c declarado en func, solo una segunda instancia que solo existe en el alcance de foo(). Ejecutando el programa solo muestra lo siguiente.  
-
-![Imagen 2. Demostración del alcance de las funciones sin el uso de parámetros.](imagenes/ejemplo_inicializacion2.png)  
-
-Imagen 2. Demostración del alcance de las funciones sin el uso de parámetros.
-
-## Tipo 2
-
-Funciones que sí reciben parámetros, pero no tienen información de retorno.  
-
-El regresar información no requiere del retorno, puede ser imprimir esa información en la pantalla en forma de texto o una gráfica. En este caso, la función “Escribir” es una función de este tipo.  
+Donde ‘a’ es el nombre; ‘b’ siendo el tamaño del arreglo. El uso de arreglos es para almacenar múltiples valores relacionados bajo un mismo lugar, sin tener que declarar múltiples variables al mismo tiempo.  
 
 ```
-Algoritmo func
-    a<-4
-    b<-7
-    c<-a*b
-    foo(c)
-FinAlgoritmo
-
-Funcion foo(a)
-    Escribir "Dentro de foo(a), a =', a
-FinFuncion
+Dimension a[5] //Esto hace una funcion similar a
+//	a1<-'H' //Todo
+//	a2<-'O'
+//	a3<-'L'
+//	a4<-'A'
+//	a5<-'!' //esto, pero mas bonito
 ```
 
-![Imagen 3. Diagrama de Flujo del algoritmo que encapsula una funcion tipo 2.](imagenes/func.png) ![Imagen 4. Diagrama de Flujo de una función tipo 2.](imagenes/func_1.png)
-
-Imagenes 3 y 4. Diagramas de Flujo de una función tipo 2 y el algoritmo que la encapsula.
-
-![Imagen 5. Salida de la función tipo 2.](imagenes/Salida_tipo_2.png)
-
-Imagen 5. Salida de la función tipo 2.
-
-## Tipo 3
-Funciones que no reciben parámetros, pero si tienen información de retorno.
-
-Una función de este tipo que es usada habitualmente es la de rand(), o en este caso azar(). Como dice el nombre de la función, regresa un número aleatorio dentro del rango dado. 
-Dependerá de la implementación si la función requiere un parámetro o tiene un rango predefinido, pero en este caso podemos forzarla dentro del rango 0-10 de la siguiente manera en las imágenes 6 y 7.  
-
-![Imagen 6. Ejemplo de una función tipo 3.](imagenes/azar.png)  
-
-Imagen 6. Ejemplo de una función tipo 3.
-
-![Imagen 7. Salida de la función foo3().](imagenes/salida_azar.png)
-
-Imagen 7. Salida de la función foo3().
-
-## Tipo 4
-Funciones que tanto reciben parámetros y regresan información por retorno.
-
-Este sería el tipo más común de encontrar, en mi opinión, y también el más fácil de encontrar una situación para aplicarlo. Asi es como funcionan todas las funciones matematicas presentes en la imagen 8.
-
-![Imagen 8. Menú Funciones Matemáticas.](imagenes/ejemplo_tipo4.png)
-
-Imagen 8. Menú Funciones Matemáticas.
+El utilizar un arreglo es como cualquier otra variable, pero se tiene que especificar la posición.  
 
 ```
-Asumiendo b = 7
-
-Funcion a<-foo4(b)
-	a<-abs(b)
-FinFuncion
+a[1]<-'H' //asi se asigna
+Escribir a[1] //asi se accede
 ```
 
-![Imagen 9. Diagrama de Flujo de foo4().](imagenes/foo4.png)
+El primer ejemplo de uso de un arreglo es representar conjuntos de caracteres, palabras u oraciones, como se ve en la imagen 1.  
 
-Imagen 9. Diagrama de Flujo de foo4().
+![Imagen 1. Usando un arreglo para almacenar caracteres.](imagenes/Ejemplo_dimension4.png)
 
-![Imagen 10. Ejemplo de salida de foo4().](imagenes/foo4_1.png)
+Imagen 1. Usando un arreglo para almacenar caracteres.
 
-Imagen 10. Ejemplo de salida de foo4().
+## Cadenas
 
+Recientemente, esta funcionalidad de almacenar carácteres ha sido pasada al tipo de dato ‘String’, presentado en la imagen 2. Este tipo de dato es utilizado para el almacenamiento de cadenas de caracteres.
+
+![Imagen 2. Uso de una cadena.](imagenes/Ejemplo_cadena2.png)  
+
+Imagen 2. Uso de una cadena.
+
+Estos tienen funciones especiales, como separar, juntar o modificar las cadenas, vistas en la imagen 3.  
+
+![Imagen 3. Funciones para cadenas.](imagenes/Ejemplo_cadena1.png)  
+
+Imagen 3. Funciones para cadenas.
+
+
+Para definir las funciones de cadenas:
+- Longitud(cadena) //Obtenemos cuantos caracteres existen dentro de esta cadena.
+- SubCadena(cadena,desde,hasta)//Obtenemos una copia de una sección de la cadena, especificando cuándo empieza y termina.
+- Concatenar(cadena,cadena) //Unimos dos cadenas, resultando una tercera nueva con el resultado.
+- ConvertirANumero(cadena) //Nos permite utilizar un número obtenido de una cadena en un cálculo.
+- ConvertirATexto(número) //Nos permite usar el resultado de un cálculo matemático en funciones de cadenas.
+- Mayusculas(cadena) //Convierte toda la cadena a Mayúsculas.
+- Minusculas(cadena) //Convierte toda la cadena a Minúsculas.
+
+
+Pero regresando a los arreglos, no estamos limitados a solo arreglos ‘lineales’ de una sola  dimensión (longitud), podemos hacer de 2 dimensiones.  
+
+```
+Dimension b[2,2] //Dimension cuadrada(dos ejes)
+	b[1,1]<-1
+	b[1,2]<-2// Esto es una matriz de 2*2 de la forma
+	b[2,1]<-3//[1,2]
+	b[2,2]<-4//[3,4]
+```
+
+También se pueden crear de 3, 4, 5 o más dimensiones; pero no hay razón de preocuparse con eso a menos que sea algo que se necesite.

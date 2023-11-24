@@ -1,69 +1,95 @@
-# [Ejemplo Adicional - Usando estructuras de control para una tienda ](https://www.youtube.com/watch?v=ITfnJW831z8&list=PLx4vAEcrpWyGMKg4tGCZi1QtLeexLZOJy&index=7)
+# [Ejemplo Adicional - Usando los tipos de funciones en una calculadora](https://www.youtube.com/watch?v=wqGUubU90AE&list=PLx4vAEcrpWyGMKg4tGCZi1QtLeexLZOJy&index=8)
+Para este siguiente ejemplo adicional tenemos una calculadora, que hace uso de los 4 tipos de funciones que vimos.
+
 ```
-Algoritmo ejemplo_adicional_1
-    //Donde se almacenan los articulos a comprar
-    Dimension carrito[15,2]
-    //Utilizamos las siguientes variables para ayudar con la legibilidad mas adelante
-    NOMBRE<-1
-    CANTIDAD<-2
-    
-    Escribir 'Bienvenido al super, que va a comprar?' //Damos contexto sobre lo que hace el programa
-    Escribir 'Se le avisa que hay un maximo de 15 articulos por compra.'//Avisamos de las restriciones puestas
-    //Dimensiones en PSeInt empiezan en 1 (Esto se puede cambiar en configurar > opciones del Lenguaje (perfiles) > personalizar)
-    posicion_lista<-1
-    //Empezamos a contar cuantos articulos llevan
-    total_articulos<-0
-    Repetir
-   	 Escribir 'Id del Articulo:'
-   	 Leer carrito[posicion_lista,NOMBRE]
-   	 Escribir 'Cantidad del Articulo'
-   	 Leer carrito[posicion_lista,CANTIDAD]
-   	 //Se revisa si la informacion añadida rompe la restriccion dada de un maximo de 15 articulos
-   	 si total_articulos + carrito[posicion_lista,CANTIDAD] < 15 Entonces
-   		 Escribir 'Algun articulo adicional?'
-   		 Leer opc
-   	 sino
-   		 Escribir 'La seleccion llenaria el carrito, o lo llenara de mas. Se agregara la cantidad suficiente para llegar al limite.'
-   		 a<-total_articulos + carrito[posicion_lista,CANTIDAD] - 15
-   		 carrito[posicion_lista,CANTIDAD] <- carrito[posicion_lista,CANTIDAD] - a
-   	 FinSi
-   	 total_articulos<-total_articulos+carrito[posicion_lista,CANTIDAD]
-    Hasta Que opc = 'n' o posicion_lista >= 15 o total_articulos >= 15 //Dejamos de repetir si el usuario lo pide o llegamos al limite de 15 articulos
-    Escribir 'Usted compro ' total_articulos ' articulos en total.'
-Escribir 'Sera con efectivo(1), tarjeta(2), o por transferencia?(3)?'
-    Leer opcion_pago
-    Segun opcion_pago Hacer
-   	 1:
-   		 Escribir 'Se le avisa que no tenemos cambio al momento.'
-   	 2:
-   		 Escribir 'La terminal esta descompuesta, lo sentimos.'
-   	 3:
-   		 Escribir 'Aqui estan los datos.'
-   	 De Otro Modo:
-   		 Escribir 'Esa opcion no es valida.'
-    Fin Segun
+Algoritmo ejemplo_adicional_2
+    Inicio
+    Calcular(Menu)
 FinAlgoritmo
+
+Funcion Inicio //tipo 1, no recibe, no regresa
+    Escribir "Calculadora inicializada"
+FinFuncion
+
+Funcion a<-Menu //tipo 2, no recibe, si regresa
+    Escribir "Elija su opcion."
+    Escribir "1. Sumar"
+    Escribir "2. Restar"
+    Escribir "3. Dividir"
+    Escribir "4. Multiplicar"
+    Escribir "5. Salir"
+    Leer a
+FinFuncion
+
+Funcion Calcular(num) //tipo 3, si recibe, no regresa
+    Si a != 5 Entonces
+   	 Escribir "Introduzca cada valor por separado."
+   	 Escribir "Valor 1"
+	 Leer num1
+   	 Escribir "Valor 2â€
+   	 Leer num2
+   	 Segun a Hacer
+   		 1:
+   			 Escribir Sumar(num1,num2)
+   		 2:
+   			 Escribir Restar(num1,num2)
+   		 3:
+   			 Escribir Dividir(num1,num2)
+   		 4:
+   			 Escribir Multiplicar(num1,num2)
+   		 De Otro Modo:
+   			 Escribir "Es su resultado."
+   	 Fin Segun
+   	 
+    FinSi
+FinFuncion
+
+Funcion a<-Sumar(num1, num2) //tipo 4, si recibe, si regresa
+    a<-num1+num2
+FinFuncion
+
+Funcion a<-Restar(num1, num2)
+    a<-num1-num2
+FinFuncion
+
+Funcion a<-Multiplicar (num1, num2)
+    a<-num1*num2
+FinFuncion
+
+Funcion a<-Dividir (num1, num2)
+    a<-num1/num2
+FinFuncion
 ```
 
-![Imagen 1. Diagrama de Flujo de Ejemplo 1.5.](imagenes/adicional_1_grafo.png)
+La forma en que implementamos las funciones de Sumar, Restar, Multiplicar y Dividir es similar como el resto de las funciones matemÃ¡ticas fueron implementadas en PSeInt. Como ejemplo: la fÃ³rmula para sen(x), teniendo solo el Ã¡ngulo:
+$\sin(x)= \displaystyle\sum_{k=0}^{\infty} \frac{(-1)^k}{(2k=1)!} x^{2k+1}$  
+Una implementaciÃ³n de este algoritmo estÃ¡ definida como la funciÃ³n de sen(x) en PSeInt.
 
-Imagen 1. Diagrama de Flujo de Ejemplo 1.5.
+Cabe mencionar, que el visualizador de grafos de PSeInt en la imagen 1 pide que se elija cuÃ¡l algoritmo/funciÃ³n se busca visualizar como en la imÃ¡genes 2 a 6.
 
-En este ejemplo se hace uso de las estructuras de control abordadas en el capítulo. 
-Empezando con un ciclo ‘for’ que controla la parte principal del programa. 
-Dentro de éste ciclo están los comandos para ingresar el producto y la cantidad de los mismos. 
-Las últimas instrucciones dentro del ciclo es un ‘if’ que revisa la suma total de artículos. 
-Si ésta suma sobrepasa el límite establecido, se le hace conocer al usuario y se reduce el número de artículos a ingresar hasta que regrese al límite.
-En el caso que todavía quede espacio en el carrito, también se le da al usuario la opción de terminar el ciclo antes de tiempo. 
-Si el usuario accede a terminar antes, o la revisión del ‘if’ concluye que el carrito está lleno, se rompe el ciclo y pasa a la siguiente parte. 
-Después del ciclo, el programa menciona el total de artículos y pregunta cuál opción de pago se va a utilizar. La opción seleccionada es evaluada por un caso ‘switch’. 
-Con esto se utilizan las tres estructuras de control vistas: caso ‘if’, caso ‘switch’ y los ciclos.
+![Imagen 1. VisualizaciÃ³n de diagramas de flujo para varias funciones.](imagenes/adicional_2_grafo.png)
 
+Imagen 1. VisualizaciÃ³n de diagramas de flujo para varias funciones.
 
-Todavía hay puntos en lo que se puede mejorar este ejemplo:
-- ¿Qué pasa si se mete información fuera de lo esperado?
-    - ¿De qué forma se implementa una manera de evitar el ingresar información errónea?
-- No existe la funcionalidad de editar o eliminar artículos del carrito, ¿cómo lo implementaría usted?
-- En el carrito, los artículos son almacenados con un número de identificación en vez de su nombre, ¿cómo se podrían utilizar los nombres de los artículos en este programa?
+![Imagen 2. Diagrama de flujo del algoritmo ejemplo_adicional_2.](imagenes/adicional_2_grafo_2.png)
 
-Existen otras maneras de mejorar este programa, piensa en una.
+Imagen 2. Diagrama de flujo del algoritmo ejemplo_adicional_2.
+
+![Imagen 3. Diagrama de flujo de la funciÃ³n Inicio().](imagenes/adicional_2_grafo_3.png)
+
+Imagen 3. Diagrama de flujo de la funciÃ³n Inicio().
+
+![Imagen 4. Diagrama de flujo de la funciÃ³n Menu().](imagenes/adicional_2_grafo_4.png)
+
+Imagen 4. Diagrama de flujo de la funciÃ³n Menu().
+
+![Imagen 5. Diagrama de flujo de la funciÃ³n Calcular().](imagenes/adicional_2_grafo_5.png)
+
+Imagen 5. Diagrama de flujo de la funciÃ³n Calcular().
+
+![Imagen 6. Diagrama de flujo de la funciÃ³n Sumar().](imagenes/adicional_2_grafo_6.png)
+
+Imagen 6. Diagrama de flujo de la funciÃ³n Sumar().
+
+Como con los demÃ¡s ejemplos, Â¿quÃ© mejoras se podrÃ­an implementar en este programa?
+Una idea es agregar mÃ¡s funciones, no solo implementar la capacidad de utilizar las funciones matemÃ¡ticas ya implementadas en PSeInt, sino tambiÃ©n una funciÃ³n matemÃ¡tica nueva.
