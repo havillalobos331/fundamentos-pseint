@@ -25,6 +25,11 @@ final<-Minusculas(a)
 Escribir final
 FinAlgoritmo
 ```
+
+![Imagen 1. Diagrama de Flujo del ejemplo 3.3.](imagenes/3.3_1.png)
+
+Imagen 1. Diagrama de Flujo del ejemplo 3.3.
+
 Como con los ejemplos anteriores, hay puntos en los que se puede mejorar este programa:
 
 La función ConvertirANumero() suelta un error cuando no puede obtener un número, este error interrumpe la ejecución del programa en su totalidad. ¿Qué cambio se podría hacer para que no se interrumpa la ejecución del programa cuando se presente esta situación?
